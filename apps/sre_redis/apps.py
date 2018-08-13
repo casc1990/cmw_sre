@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class SreRedisConfig(AppConfig):
-    name = 'apps.sre_redis'
+    name = 'sre_redis'
+    verbose_name = u'Redis'

@@ -100,6 +100,7 @@ DATABASE_ROUTERS = ['database_router.DatabaseAppsRouter']
 DATABASE_APPS_MAPPING = {
     # example:
     # 'app_name':'database_name',
+    'xadmin' : 'default',
     'sre_redis': 'db01',
 }
 
