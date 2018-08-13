@@ -86,9 +86,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'db01':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sre_redis',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
-
+DATABASE_ROUTERS = ['database_router.DatabaseAppsRouter']
+DATABASE_APPS_MAPPING = {
+    # example:
+    # 'app_name':'database_name',
+    'sre_redis': 'db01',
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
